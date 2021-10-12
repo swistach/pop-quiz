@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import './variables';
+
+body {
+  background: $bg-gray-50;
+  margin: 0;
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}

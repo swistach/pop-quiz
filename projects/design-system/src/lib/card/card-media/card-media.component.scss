@@ -1,0 +1,7 @@
+@import '../../../../../../src/variables';
+
+:host,
+:host img {
+  @include block;
+  width: 100%;
+}

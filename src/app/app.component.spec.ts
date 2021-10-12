@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('pop-quiz');
   });
 
-  it('should render title', () => {
+  it('should render start box', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('pop-quiz app is running!');
+    expect(compiled.querySelector('.card-header .heading')?.textContent).toContain('Start a new pop quiz');
   });
 });

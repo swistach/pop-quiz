@@ -1,0 +1,23 @@
+@import '../../../../../src/variables';
+
+.heading {
+  margin: 0;
+  @include text-heading;
+
+  @media (min-width: $bp-md-min) {
+    @include text-heading-large;
+  }
+}
+
+.content {
+  margin: 0;
+  @include text-content;
+
+  @media (min-width: $bp-md-min) {
+    @include text-content-large;
+  }
+}
+
+.legend {
+  @include text-legend;
+}

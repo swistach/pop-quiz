@@ -1,0 +1,13 @@
+@import '../../../../../../src/variables';
+
+:host {
+  @include auto-padding;
+  @include block;
+
+  button {
+    @include block;
+    padding: $gap;
+  }
+
+  
+}

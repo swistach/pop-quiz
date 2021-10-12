@@ -1,0 +1,49 @@
+@import '../../../../../src/variables';
+
+:host {
+  button {
+    @include text-button;
+    @include border-radius;
+    @include elevate-low;
+    @include transition(background);
+
+    font-family: $font-family;
+    display: inline-block;
+    padding: $gap;
+    border: 0;
+    cursor: pointer;
+
+    @media (min-width: $bp-md-min) {
+      @include text-button-large;
+    }
+
+    &.block {
+      @include block;
+      width: 100%;
+    }
+
+    &.primary {
+      color: $text-white;
+      background: $bg-primary;
+
+      &:hover {
+        background: $bg-primary-light;
+      }
+      &:active {
+        background: $bg-primary-dark;
+      }
+    }
+
+    &.secondary {
+      color: $text-white;
+      background: $bg-secondary;
+
+      &:hover {
+        background: $bg-secondary-light;
+      }
+      &:active {
+        background: $bg-secondary-dark;
+      }
+    }
+  }
+}

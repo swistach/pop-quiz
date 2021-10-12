@@ -1,0 +1,35 @@
+@import '../../../../../../src/variables';
+
+
+:host {
+  display: grid;
+  align-items: center;
+  max-width: 1270px;
+  min-height: 100vh;
+  gap: 1.5rem;
+  grid-template-rows: 1fr min-content min-content 1fr;
+  grid-template-areas:
+      ". . . "
+      ". a . "
+      ". b . "
+      ". . . ";
+  justify-items: center;
+  margin: 0 auto;
+
+  @media (min-width: $bp-md-min) {
+    grid-template-rows: 1fr min-content min-content 1fr;
+    grid-template-areas:
+      ". . . . . . . . . . . ."
+      ". . . a a a a a a . . ."
+      ". . . b b b b b b . . ."
+      ". . . . . . . . . . . .";
+  }
+
+  @media (min-width: $bp-lg-min) {
+    grid-template-rows: 1fr min-content 1fr;
+    grid-template-areas:
+      ". . . . . . . . . . . ."
+      ". . a a a a b b b b . ."
+      ". . . . . . . . . . . .";
+  }
+}
