@@ -16,7 +16,7 @@ export class PageSummaryComponent implements OnInit {
 
   ngOnInit(): void {
     this.score = this.questionsService.getScore();
-    this.questionsService.reset();
+    this.questionsService.resetProgress();
   }
 
 }

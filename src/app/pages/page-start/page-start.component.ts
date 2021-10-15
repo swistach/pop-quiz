@@ -12,7 +12,6 @@ export class PageStartComponent implements OnInit {
   constructor(private _questions: QuestionsService) { }
 
   ngOnInit(): void {
-    this.canContinue = this._questions.hasAlreadyStarted();
+    this.canContinue = this._questions.countAnswers() > 0;
   }
-
 }

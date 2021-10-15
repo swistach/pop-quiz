@@ -16,11 +16,15 @@ export class QuestionsService {
   private _questions!: Question[];
 
   constructor(private _storage: StorageService) {
-    this._questions = QuestionsService.generateQuestions();
-    this.loadProgress();
+    this.loadQuestions();
+    this.loadAnswers();
   }
 
-  loadProgress() {
+  loadQuestions() {
+    this._questions = QuestionsService.generateQuestions();
+  }
+
+  loadAnswers() {
     const loadedAnswers: AnswerRaw[] = this._storage.load();
 
     if (!loadedAnswers) {
@@ -30,11 +34,11 @@ export class QuestionsService {
     this._answers = new Map(loadedAnswers);
   }
 
-  getLength() {
-    return this._questions?.length;
+  countQuestions() {
+    return this._questions.length;
   }
 
-  getAnswers() {
+  countAnswers() {
     return this._answers.size;
   }
 
@@ -42,11 +46,16 @@ export class QuestionsService {
     this._storage.save([...this._answers.entries()]);
   }
 
-  areAnsweredAll() {
-    return this._questions.length === this._answers.size;
+  resetProgress() {
+    this._storage.remove();
+    this._answers.clear();
   }
 
-  hasAlreadyStarted() {
+  areAnsweredAll() {
+    return this.countQuestions() === this.countAnswers();
+  }
+
+  hasAnyAnswer() {
     return this._answers.size > 0;
   }
 
@@ -54,13 +63,8 @@ export class QuestionsService {
     return this._questions[idx];
   }
 
-  answer(idx: number, answer: string) {
+  setAnswer(idx: number, answer: string) {
     this._answers.set(idx, answer);
-  }
-
-  reset() {
-    this._storage.remove();
-    this._answers.clear();
   }
 
   getScore() {
@@ -69,6 +73,6 @@ export class QuestionsService {
         const diff = this._questions[id]?.answer === answer ? 1 : 0;
 
         return acc + diff;
-      }, 0)}/${this.getLength()}`
+      }, 0)}/${this.countQuestions()}`
   }
 }

@@ -14,7 +14,7 @@ export class StartBoxComponent {
   ) { }
 
   onClick() {
-    this.questionService.reset();
+    this.questionService.resetProgress();
     this.router.navigate(['/quiz']);
   }
 }

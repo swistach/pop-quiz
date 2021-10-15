@@ -25,10 +25,10 @@ export class PageQuizComponent implements OnInit {
   }
 
   getTotal() {
-    this.total = this.questionsService.getLength();
+    this.total = this.questionsService.countQuestions();
   }
   getCurrentQuestion() {
-    this.currentQuestion = this.questionsService.getAnswers()
+    this.currentQuestion = this.questionsService.countAnswers()
   }
   getNextQuestion() {
     if (this.total === this.currentQuestion) {
@@ -41,7 +41,7 @@ export class PageQuizComponent implements OnInit {
   }
 
   onAnswered({ idx, answer}: {idx: number, answer: string}) {
-    this.questionsService.answer(idx, answer);
+    this.questionsService.setAnswer(idx, answer);
     this.questionsService.saveProgress()
 
     this.getNextQuestion();
