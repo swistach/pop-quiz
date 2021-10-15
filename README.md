@@ -1,5 +1,8 @@
 # PopQuiz
 
+The `/docs` directory contains Figma's project file with graphical assets and user flow. Material Design patterns inspired me, but instead of just installing `@angular/material` and `@angular/cdk`, I wanted to prepare an example design system for that assignment.
+In case you don't have access to the Figma app, I exported PDFs.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
 
 ## Development server
