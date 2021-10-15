@@ -1,9 +1,9 @@
-<ds-layout-container class="grid-1 md-grid-12 min-vh-100 items-center gap-1-25">
-  <ds-layout-block align-y="middle" align-y="center" class="md-block-6 lg-block-4">
+<ds-layout-container>
+  <ds-layout-block class="md-cols-4-9 lg-cols-5-8">
     <app-question-box
-      *ngFor="let question of questions; index as i"
       [question]="question"
-      [current]="i + 1"
-      [total]="questions.length"></app-question-box>
+      [current]="currentQuestion"
+      [total]="total"
+      (answerEvent)="onAnswered($event)"></app-question-box>
   </ds-layout-block>
 </ds-layout-container>

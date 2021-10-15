@@ -1,6 +1,5 @@
-interface Answer {
+export type QuestionOption = {
   value: string;
-  correct?: boolean;
 }
 
 export interface Question {
@@ -9,5 +8,6 @@ export interface Question {
     url: string;
     description: string;
   };
-  options: Answer[]
+  answer: string;
+  options: QuestionOption[];
 }

@@ -1,0 +1,13 @@
+@import '../../../../../../src/variables';
+
+:host {
+  label {
+    @include block;
+    padding: $gap;
+
+    &:hover,
+    &:focus-within {
+      background: $gray-100;
+    }
+  }
+}

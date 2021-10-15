@@ -1,8 +1,6 @@
 <ds-layout-container>
-  <ds-layout-block [ngStyle]="{'grid-area': 'a'}">
+  <ds-layout-block class="md-cols-4-9 lg-cols-5-8">
     <app-start-box></app-start-box>
-  </ds-layout-block>
-  <ds-layout-block [ngStyle]="{'grid-area': 'b'}">
-    <app-continue-box></app-continue-box>
+    <app-continue-box *ngIf="canContinue"></app-continue-box>
   </ds-layout-block>
 </ds-layout-container>

@@ -23,26 +23,26 @@
     }
 
     &.primary {
-      color: $text-white;
-      background: $bg-primary;
+      color: $white;
+      background: $primary;
 
       &:hover {
-        background: $bg-primary-light;
+        background: $primary-light;
       }
       &:active {
-        background: $bg-primary-dark;
+        background: $primary-dark;
       }
     }
 
     &.secondary {
-      color: $text-white;
-      background: $bg-secondary;
+      color: $white;
+      background: $secondary;
 
       &:hover {
-        background: $bg-secondary-light;
+        background: $secondary-light;
       }
       &:active {
-        background: $bg-secondary-dark;
+        background: $secondary-dark;
       }
     }
   }

@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { DesignSystemModule } from 'projects/design-system/src/public-api';
+import { SummaryBoxComponent } from 'src/app/boxes/summary-box/summary-box.component';
 
 import { PageSummaryComponent } from './page-summary.component';
 
@@ -8,7 +11,11 @@ describe('PageSummaryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PageSummaryComponent ]
+      imports: [
+        RouterTestingModule,
+        DesignSystemModule,
+      ],
+      declarations: [ PageSummaryComponent, SummaryBoxComponent ]
     })
     .compileComponents();
   });

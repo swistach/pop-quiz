@@ -3,11 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'ds-list-group',
   template: `
-    <form>
-      <ul>
-        <ng-content></ng-content>
-      </ul>
-    </form>
+    <ul>
+      <ng-content></ng-content>
+    </ul>
   `,
   styleUrls: ['./list-group.component.scss']
 })

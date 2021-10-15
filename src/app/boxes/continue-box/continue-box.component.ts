@@ -12,8 +12,6 @@ export class ContinueBoxComponent {
   ) { }
 
   onClick() {
-    console.log('StartBoxComponent.onClick');
-
     this.router.navigate(['/quiz']);
   }
 }

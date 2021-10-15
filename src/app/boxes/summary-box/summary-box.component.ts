@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-summary-box',
   templateUrl: './summary-box.component.html',
   styleUrls: ['./summary-box.component.scss']
 })
-export class SummaryBoxComponent implements OnInit {
+export class SummaryBoxComponent {
+  @Input() score!: string;
+  @Input() summary!: string;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
-  ngOnInit(): void {
+  onClick() {
+    this.router.navigate(['/quiz']);
   }
 
 }

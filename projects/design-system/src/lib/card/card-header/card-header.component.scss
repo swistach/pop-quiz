@@ -3,4 +3,14 @@
 :host {
   @include auto-padding;
   @include block;
+
+  .card-header {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: $gap;
+  }
+  &.with-icon .card-header {
+    grid-template-columns: min-content;
+  }
 }

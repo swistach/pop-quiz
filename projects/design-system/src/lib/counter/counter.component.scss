@@ -1,0 +1,12 @@
+@import '../../../../../src/variables';
+
+:host {
+  @include text-legend;
+
+  background: $secondary;
+  color: $white;
+  width: 2 * $gap;
+  line-height: 2 * $gap;
+  text-align: center;
+  border-radius: 2 * $gap;
+}

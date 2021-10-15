@@ -5,9 +5,10 @@
       "url": "/assets/0.png",
       "description": "pic desc"
     },
+    "answer": "Ruud van Nistelrooy",
     "options": [
       { "value": "Ryan Giggs" },
-      { "value": "Paul Scholes", "correct": true },
+      { "value": "Paul Scholes"},
       { "value": "Ruud van Nistelrooy" },
       { "value": "Cristiano Ronaldo" }
     ]
@@ -18,11 +19,12 @@
       "url": "/assets/1.png",
       "description": "pic desc"
     },
+    "answer": "Cristiano Ronaldo",
     "options": [
       { "value": "Ryan Giggs" },
       { "value": "Paul Scholes" },
       { "value": "Ruud van Nistelrooy" },
-      { "value": "Cristiano Ronaldo", "correct": true }
+      { "value": "Cristiano Ronaldo" }
     ]
   },
   {
@@ -31,10 +33,11 @@
       "url": "/assets/2.png",
       "description": "pic desc"
     },
+    "answer": "Paul Scholes",
     "options": [
       { "value": "Ryan Giggs" },
       { "value": "Paul Scholes" },
-      { "value": "Ruud van Nistelrooy", "correct": true },
+      { "value": "Ruud van Nistelrooy" },
       { "value": "Cristiano Ronaldo" }
     ]
   }

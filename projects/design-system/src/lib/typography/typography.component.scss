@@ -20,4 +20,5 @@
 
 .legend {
   @include text-legend;
+  color: $gray-400;
 }

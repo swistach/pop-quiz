@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { QuestionsService } from '../../services/questions.service';
 
 @Component({
   selector: 'app-start-box',
@@ -8,12 +9,12 @@ import { Router } from '@angular/router';
 })
 export class StartBoxComponent {
   constructor(
+    private questionService: QuestionsService,
     private router: Router,
   ) { }
 
   onClick() {
-    console.log('StartBoxComponent.onClick');
-
+    this.questionService.reset();
     this.router.navigate(['/quiz']);
   }
 }

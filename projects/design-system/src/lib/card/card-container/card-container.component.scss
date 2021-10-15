@@ -1,7 +1,8 @@
 @import '../../../../../../src/variables';
 
 .card-container {
-  background: $bg-white;
+  background: $white;
+  width: 100%;
 
   @include border-radius;
   @include elevate-high;
